@@ -61,3 +61,48 @@ function rangeOfNumbers(startNum, endNum) {
 }
 
 console.log(rangeOfNumbers(6, 15));
+
+
+const result = {
+	success: ["max-length", "no-amd", "prefer-arrow-functions"],
+	failure: ["no-var", "var-on-top", "linebreak"],
+	skipped: ["no-extra-semi", "no-dup-keys"],
+};
+function makeList(arr) {
+	// Only change code below this line
+	const failureItems = [];
+	arr.forEach((fail) => {
+		failureItems.push(`<li class="text-warning">${fail}</li>`);
+	});
+	// Only change code above this line
+
+	return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+console.log(failuresList);
+
+
+// class, constructor, getters and setters
+class Thermostat {
+	constructor(fahrenheit) {
+		this._fahrenheit = fahrenheit;
+	}
+
+	// getters
+	get temperature() {
+		return (5 / 9) * (this._fahrenheit - 32);
+	}
+
+	// setters
+	set temperature(c) {
+		this._fahrenheit = (c * 9.0) / 5 + 32;
+	}
+}
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+console.log(temp);
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in
+console.log(temp);

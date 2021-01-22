@@ -24,16 +24,15 @@ const initApp = () => {
 					value = 0;
 					break;
 			}
+			valueCase.innerText = value;
 
 			if (value < 0) {
 				valueCase.style.color = "red";
 			} else if (value > 0) {
 				valueCase.style.color = "green";
 			} else {
-				valueCase.style.color = "hsl(209, 61%, 16%)";
+				valueCase.style.color = "#102a42";
 			}
-			
-			valueCase.innerText = value;
 		});
 	});
 };
